@@ -45,6 +45,7 @@ class CRM_Votertools_Upgrader extends CRM_Votertools_Upgrader_Base {
    */
   public function enable() {
     $this->executeSqlFile('sql/auto-install.sql');
+    $this->executeCustomDataFile('xml/auto_install.xml');
     // CRM_Core_DAO::executeQuery('UPDATE foo SET is_active = 1 WHERE bar = "whiz"');
   }
 
